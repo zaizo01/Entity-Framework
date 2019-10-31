@@ -1,0 +1,32 @@
+﻿@model List<EntityF.Models.ViewModels.ListTablaViewModel>
+@{
+    ViewBag.Title = "Mis datos";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+            </tr>
+            
+            @foreach (var oElement in Model)
+            {
+        <tr>
+            <td>@oElement.id</td>
+            <td>@oElement.nombre</td>
+            <td>@oElement.correo</td>
+        </tr>
+            }
+            </table>
+         
+    </div>
+
+</div>
+
+
